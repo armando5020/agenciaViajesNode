@@ -1,0 +1,40 @@
+//-desde pug directamente podemos pasar el valos de la variable al parrafo con el signo de igual
+
+//-heredamos contenido del padre o master page para mostrarlo en pantalla principa que es el index.pug
+extends ./layout/index 
+
+block contenido
+    main.container.mt-5 
+        .row 
+            .col-md-5 
+                //-colocamos una imagen
+                img(src="img/nosotros.jpg", alt="torre eifield",class="img-fluid")
+
+            .col-md-7
+                //-variable inicio
+                h1 #{pagina}
+                
+                    
+                blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet libero nec nunc lobortis blandit vel nec sem. Integer vitae mauris a sapien lacinia iaculis. Vivamus faucibus suscipit tincidunt. Cras vel ultrices nibh, in pretium risus. Aliquam vel laoreet nisi, at tempor enim. Aliquam erat volutpat. Fusce volutpat sem sit amet velit venenatis rutrum. In bibendum nibh non efficitur sollicitudin. Morbi consectetur eros ac nunc porta fermentum. Suspendisse vulputate ultrices diam, in blandit justo convallis convallis. Nulla at fringilla odio. Aliquam accumsan maximus odio, placerat facilisis nisl pharetra vitae. Nam cursus libero lacus, ut vulputate nulla ornare a.
+
+                p Suspendisse sit amet eros quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer et pellentesque tellus.
+
+                p Duis mollis ex orci, nec blandit nibh euismod non. Pellentesque placerat id nisi id congue. Vivamus a sapien id orci rutrum mollis at eget elit. Ut imperdiet ipsum placerat, tempus est id, facilisis ligula. Etiam ut condimentum dui. Pellentesque blandit lectus tempor erat euismod lobortis. Integer cursus efficitur tempor. Praesent aliquam nisl at libero sodales, eget elementum ipsum dictum.
+
+    .listado-iconos
+        .container.mt-5.py-5.text-center 
+            .row
+                .col-md-4
+                 img(src="img/icono_seguridad.svg",alt="icono seguridad",class="img-fluid mb-4")
+                 h2.mb-4 Seguridad 
+                 p  Pellentesque placerat id nisi id congue. Vivamus a sapien id orci rutrum mollis at eget elit  Ut imperdiet ipsum placerat, tempus est id.
+
+                .col-md-4
+                 img(src="img/icono_destinos.svg",alt="icono destinos",class="img-fluid mb-4")
+                 h2.mb-4 Mejores Destinos 
+                 p  Pellentesque placerat id nisi id congue. Vivamus a sapien id orci rutrum mollis at eget elit  Ut imperdiet ipsum placerat, tempus est id.
+
+                .col-md-4
+                 img(src="img/icono_precios.svg",alt="icono precios",class="img-fluid mb-4")
+                 h2.mb-4 Los mejores Precios 
+                 p  Pellentesque placerat id nisi id congue. Vivamus a sapien id orci rutrum mollis at eget elit  Ut imperdiet ipsum placerat, tempus est id.

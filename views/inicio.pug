@@ -1,0 +1,41 @@
+//-indicamos la ruta del elemento padre o master page ./layout/index y agremos block contenido que sera el contenido de la pagina nostros, se agregara a la master page
+extends ./layout/index 
+
+block slider
+    //-clase de slider viene definida en la hoja de estilo
+    .slider
+        h1 Rio de janeiro
+
+block contenido
+    main.container.mt-5
+        h2.text-center.mb-5  Sobre Nosotros
+        .row 
+           .col-md-6
+                p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, sapiente odit. Accusamus laudantium necessitatibus voluptatem at libero iste dignissimos veritatis, ad, ducimus sapiente, molestiae unde cupiditate dolor optio soluta tenetur.Nobis sed voluptas dolores, dignissimos facilis excepturi aperiam, distinctio atque quos magni similique qui, voluptates illum! Doloremque laboriosam odio illo nesciunt, eaque sequi nemo corporis perspiciatis pariatur quia, quidem fuga.
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ut ipsam molestiae tempora adipisci quisquam rem necessitatibus, magni ex aliquam hic at, quae, doloribus consectetur sit dicta debitis vitae. Iste.
+           .col-md-6
+            img(src="/img/inicio_nosotros.jpg", alt="imagen nosotros")
+        
+            //-p=JSON.stringify(viajes) =>prueba para ver los datos
+            
+        main.container.mt-5
+        include ./layout/bloque_viajes
+
+    //-los estilos de descuento esta definido en la clase .decuento de la hoja de estilo
+    .descuento
+        .container
+            .row
+                .col-md-6
+                    .contenido
+                      h3 5% de Descuento
+                      p.titulo viaje a Canada 
+                      p.fecha 20 de Marzo de 2022 -28 de MArzo de 2023
+                      p.precio 2500€ EUR
+
+    h2.mt-5.text-center Testimoniales
+    include ./layout/bloque_testimoniales                       
+                      
+                      
+                       
+      
+                      

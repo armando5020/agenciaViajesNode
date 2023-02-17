@@ -1,0 +1,16 @@
+header
+    //-creamos un div, hay varias formas div(class="navegacion"), div.navegacion o simplemente .navegacion crea el dic con la clase
+    div(class="navegacion")
+       .container 
+            .row.justify-content-center.justify-content-md-md-between.aling-items-center.py-4 
+                .col-md-4.col-6
+                    //-colocamos enlace y logo que nos llevara a la pagina principal
+                    a(href="/") 
+                        img(src="/img/logo.svg", alt="sitio logo")
+
+                .col-md-8
+                    //-con la etiquta nav nos crea un menu de navegacion
+                    nav.mt-5.mt-md-0.nav.justify-content-center.justify-content-md-end
+                        a.nav-link(href="/nosotros") Nosotros
+                        a.nav-link(href="/viajes") Viajes
+                        a.nav-link(href="/testimoniales") Testimoniales

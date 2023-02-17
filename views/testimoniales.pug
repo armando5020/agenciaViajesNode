@@ -1,0 +1,41 @@
+//-desde pug directamente podemos pasar el valos de la variable al parrafo con el signo de igual
+
+//-heredamos contenido del padre o master page para mostrarlo en pantalla principa que es el index.pug
+extends ./layout/index 
+
+block contenido
+    main.container.mt-5
+        //-variable inicio
+        h1.text-center.mt-5 #{pagina}
+
+        blockquote.text-center Lee sobre nuestros clientes y sus experiencias
+        include ./layout/bloque_testimoniales
+                           
+            
+
+        .row
+       
+                .col-md-12
+                        h2.d-block.w-100.text-center Agrega un Testimonial
+
+                        if(errores)
+                            each error in errores
+                                .alert.col.alert-danger.text-center=error.mensaje
+
+                .row.justify-content-center.col 
+                    .col-md-8 
+                        //-formulario en pug
+                        form(action ="/testimoniales" method="POST")
+                            .form-group
+                                label(for="nombre") Nombre
+                                input#nombre(type="text", placeholder="Tu Nombre", name="nombre", class="form-control",value=nombre)
+                            .form-group
+                                label(for="correo") Correo Electrónico
+                                input#correo(type="text", placeholder="Tu Correo", name="correo", class="form-control",value=correo)
+                            .form-group
+                                label(for="correo") Mensaje
+                                textarea#mensaje(class="form-control", name="mensaje", placeholder="Tu Mensaje", cols="30" rows="3")=value=mensaje
+
+                            input.btn.btn-success.btn-block(type="submit")
+
+

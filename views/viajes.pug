@@ -1,0 +1,15 @@
+//-desde pug directamente podemos pasar el valos de la variable al parrafo con el signo de igual
+
+//-heredamos contenido del padre o master page para mostrarlo en pantalla principa que es el index.pug
+extends ./layout/index 
+block contenido
+    //-variable inicio
+    h1(class="mt-5 text-center") #{pagina}
+    main.container.mt-5 
+        //- quitamos este bloque y lo añadimos a un fichero externo llamado bloque_viajes.pug
+        include ./layout/bloque_viajes
+       
+           
+           
+          
+       
